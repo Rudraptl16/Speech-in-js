@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> AI Speaker </title>
+    <link rel="shortcut icon" type="x-icon" href="AI Speaker.png">
+</head>
+<body>
+    <div>
+        <input id="input">
+        <button onclick="speak()">Speak</button>
+    </div>
+          
+    <style>
+        body {
+            display: flex;
+            justify-self: unset;
+            align-items: center;
+            justify-self: unset;
+            justify-content: center;
+            height: 100vh;
+            background-color: #2d3745;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            color: #333;
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-right: 10px;
+            width: 300px;
+            font-size: 16px;
+            color: #ff0000;
+            background-color: #ffffff00;
+            border-color: rgb(60, 255, 0);
+            border-width: 2px;
+        }
+
+        button{
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff00;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function speak(){
+            var text = document.getElementById("input").value;
+            var utterance = new SpeechSynthesisUtterance(text);
+            speechSynthesis.speak(utterance);
+        }
+    </script>
+</body>
+</html>   
